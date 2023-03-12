@@ -6,4 +6,5 @@ services:
     build:
       context: ./build
     volumes:
-      - ./config/kea-dhcp4.conf:/etc/kea-dhcp4.conf
+      - ./config/kea-dhcp4.conf:/etc/kea/kea-dhcp4.conf
+    network_mode: host
