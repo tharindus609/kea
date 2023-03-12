@@ -5,6 +5,17 @@ services:
     image: tharindus609/kea-dhcp4
     build:
       context: ./build
+      dockerfile: kea.dockerfile
     volumes:
       - ./config/kea-dhcp4.conf:/etc/kea/kea-dhcp4.conf
+    network_mode: host
+  
+  dhcp6:
+    container_name: kea-dhcp6
+    image: tharindus609/kea-dhcp6
+    build:
+      context: ./build
+      dockerfile: kea.dockerfile
+    volumes:
+      - ./config/kea-dhcp6.conf:/etc/kea/kea-dhcp6.conf
     network_mode: host
