@@ -1,0 +1,9 @@
+version: "3"
+services:
+  dhcp4:
+    container_name: kea-dhcp4
+    image: tharindus609/kea-dhcp4
+    build:
+      context: ./build
+    volumes:
+      - ./config/kea-dhcp4.conf:/etc/kea-dhcp4.conf

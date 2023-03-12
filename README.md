@@ -1,4 +1,4 @@
-# piHole
+# kea-dhcp
 
 ## Description
-piHole DNS and DHCP server running in host mode
+[kea-dhcp](https://www.isc.org/kea/) instance dockerized
